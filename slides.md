@@ -417,7 +417,7 @@ class: middle, center
 class: middle, center
 
 
-![Paul Erdos](https://upload.wikimedia.org/wikipedia/commons/2/2f/Erdos_budapest_fall_1992_%28cropped%29.jpg)
+![Paul Erdos](assets/erdos.png)
 
 ---
 

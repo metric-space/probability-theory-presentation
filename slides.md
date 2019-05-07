@@ -142,7 +142,7 @@ class: middle, center
 
 --
 
-> Given all the premises are true combined with rules of deductive reasoning the conclusion is true
+> Given all the premises are true combined with rules of deductive reasoning, then the conclusion is true
 
 ---
 
@@ -331,7 +331,7 @@ class: middle, center
 
 class: middle, center
 
-# Probabalistic reasoning
+# Probabilistic reasoning
 
 --
 
@@ -473,3 +473,309 @@ class: middle, center
 
 
 ---
+
+class: middle, center
+
+
+### What is Probability?
+
+--
+
+- Intuitively, it is a measure of one's belief that an event will occur
+
+--
+
+- This is always a number either expressed as a percentage or a real number from 0 to 1
+
+---
+
+class: middle, center
+
+
+### Few more definitions to get out of the way
+
+---
+
+class: middle, center
+
+### Random experiment
+
+--
+
+> The setup within which events of interest occur
+
+--
+
+> **examples:**  tossing a coin, shuffling cards, people undergoing medical trials, gameshow
+
+---
+
+class: middle, center
+
+
+### Sample Space (very very important)
+
+--
+
+> When you list all the outcomes of a random experiment, you get a sample space 
+
+---
+
+class: middle, center
+
+
+### Sample Space Examples (very very important)
+
+--
+
+1. Coin toss : `[heads, tails]`
+
+--
+
+2. Single Dice Roll: `[1,2,3,4,5,6]`
+
+--
+
+3. Double Dice Roll: `[(1,1),(1,2),(1,3) .. (1,6), (2,1) ... (2,6) ..... (6,1)...(6,6)]`
+
+--
+
+4. random card draw (only interested in the suite): `[Diamond, Clubs, Spade, Hearts]`
+
+--
+
+5. Monty Hall Problem `[(Goat, Goat, Car), (Goat, Car, Goat), (Car, Goat, Goat)]`
+
+---
+
+class: middle, center
+
+### Probability formula
+
+--
+
+(count of _favourable outcomes_)/(total count of _sample space_)
+
+---
+
+class: middle, center
+
+
+### Examples whose answer you are implicitly aware of
+
+--
+
+* What is the probability of landing a heads on a fair coin toss?
+
+--
+
+* **Answer** 50%
+
+--
+
+* Probability of landing a 2 on a dice roll?
+
+--
+
+* **Answer** 0.16666%
+
+--
+
+* Probability of car being behind one of the three doors in the monty hall problem?
+
+--
+
+* **Answer** 0.33333 %
+
+---
+
+class: middle, center
+
+
+### Back to the Monty Hall Problem
+
+---
+
+class: middle, center
+
+
+### The Monty Hall Problem Description
+
+--
+
+1. You are in a game show
+
+--
+
+2. You are shown three closed doors 
+
+--
+
+3. Behind one of those closed doors is a car
+
+--
+
+4. The rest of the doors hide a  goat each
+
+--
+
+5. You tell the game host you think door 1 is the car door
+
+--
+
+6. The game host opens door 3 and reveals a goat behind it
+
+--
+
+7. The game host turns to you and asks you ......
+
+
+---
+
+class: middle, center
+
+
+## Do you want to switch doors ?
+
+
+![Monty](assets/monty.png)
+
+
+---
+
+class: middle, center
+
+
+### The things that apply to the game host
+
+--
+
+1. **He knows which door is the winning door**
+
+--
+
+2. **After you've chosen a door, he can ONLY open a door with a goat behind it and NOT a door with car behind it**
+
+---
+
+class: middle, center
+
+
+### Prior probabilistic model
+
+--
+
+> There is an equal probability of the car being behind each of the three doors
+
+---
+
+class: middle, center
+
+
+### Additional info
+
+--
+
+> He opens door 3 to show you a goat, ** THAT GIVES YOU MORE INFO TO INCORPORATE IN YOUR MODEL **
+
+--
+
+> Question is how do you incorporate this new info into your prior probabilistic model?
+
+
+---
+
+class: middle, center
+
+### Enter Bayes theorem
+
+--
+
+> In general this is a way to refine your probabilistic model based on new evidence 
+
+--
+
+> ( each hypothesis | new info)  =  (new info | each hypothesis) * old probabilistic model
+
+--
+
+1. (each hypothesis | new info) is called the **posterior probabilistic model**
+
+--
+
+2. (new info | each hypothesis) is the **bayes factor**
+
+---
+
+### Calculating the bayes factor
+
+--
+
+1. **Bayes Factor** = P(new info | each hypothesis)
+
+--
+
+2. All competiting hypothesis are  `{The car is behind door 1, the car behind door 2, car is behind door 3}`
+
+--
+
+3. **new info** is the host opening door 3 to reveal a goat 
+
+--
+
+4. P(new info| given car is behind door 1) = 0.5 
+
+--
+
+5. P(new info| given car is behind door 2) = 1
+
+--
+
+6. P(new info| given car is behind door 3) = 0
+
+--
+
+7. Bayes factor in ratio form = `0.5:1:0` **OR** `1:2:0`
+
+---
+
+class: middle, center
+
+# The solution
+
+--
+
+1. ( new probabilistic model | new info)  =  (new info | each hypothesis) * old probabilistic model 
+
+--
+
+2. old probabilistic model = `1:1:1` 
+
+--
+
+3. bayes factor = `1:2:0`
+
+--
+
+4. R.H.S = `(1:1:1)*(1:2:0)` = `1:2:0` 
+
+
+---
+
+class: middle, center
+
+# The solution: Switch!
+
+
+---
+
+# Fun Fact: Apparently the best bayesian machines known to man are sitting in this very room
+
+
+
+
+
+
+
+
+
